@@ -1,0 +1,33 @@
+<svg width="1200" height="40" viewBox="0 0 1200 40" xmlns="http://www.w3.org/2000/svg">
+
+<style>
+.line{
+stroke:#8B8B8B;
+stroke-width:1;
+opacity:.35;
+stroke-dasharray:8 12;
+animation:move 12s linear infinite;
+}
+
+.dot{
+fill:#E8E6DF;
+opacity:.9;
+animation:pulse 4s ease-in-out infinite;
+}
+
+@keyframes move{
+from{stroke-dashoffset:0;}
+to{stroke-dashoffset:-400;}
+}
+
+@keyframes pulse{
+0%,100%{opacity:.3;}
+50%{opacity:1;}
+}
+</style>
+
+<line class="line" x1="0" y1="20" x2="1200" y2="20"/>
+
+<circle class="dot" cx="600" cy="20" r="2"/>
+
+</svg>
