@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="120" viewBox="0 0 500 120">
+
+<style>
+.title{
+fill:#ECE8E1;
+font-family:Georgia,'Times New Roman',serif;
+font-size:38px;
+letter-spacing:6px;
+}
+
+.sub{
+fill:#8D8D8D;
+font-family:Georgia,serif;
+font-size:14px;
+letter-spacing:3px;
+}
+
+.line{
+stroke:#7B746A;
+stroke-width:1;
+opacity:.55;
+stroke-dasharray:8 10;
+animation:flow 18s linear infinite;
+}
+
+.dot{
+fill:#D6D1C7;
+animation:pulse 5s ease-in-out infinite;
+}
+
+@keyframes flow{
+from{stroke-dashoffset:0;}
+to{stroke-dashoffset:-500;}
+}
+
+@keyframes pulse{
+0%,100%{
+opacity:.35;
+r:2;
+}
+50%{
+opacity:1;
+r:3.5;
+}
+}
+</style>
+
+<line class="line" x1="15" y1="60" x2="160" y2="60"/>
+
+<text x="180" y="68" class="title">Tes</text>
+
+<line class="line" x1="305" y1="60" x2="485" y2="60"/>
+
+<circle class="dot" cx="250" cy="22" r="2"/>
+
+<text x="198" y="100" class="sub">
+still becoming.
+</text>
+
+</svg>

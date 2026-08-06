@@ -1,33 +1,31 @@
-<svg width="1200" height="40" viewBox="0 0 1200 40" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="28" viewBox="0 0 1200 28">
 
 <style>
+
 .line{
-stroke:#8B8B8B;
+stroke:#6F6A61;
 stroke-width:1;
-opacity:.35;
-stroke-dasharray:8 12;
-animation:move 12s linear infinite;
+opacity:.5;
 }
 
 .dot{
-fill:#E8E6DF;
-opacity:.9;
+fill:#D8D3C7;
 animation:pulse 4s ease-in-out infinite;
 }
 
-@keyframes move{
-from{stroke-dashoffset:0;}
-to{stroke-dashoffset:-400;}
+@keyframes pulse{
+0%,100%{
+opacity:.3;
+}
+50%{
+opacity:1;
+}
 }
 
-@keyframes pulse{
-0%,100%{opacity:.3;}
-50%{opacity:1;}
-}
 </style>
 
-<line class="line" x1="0" y1="20" x2="1200" y2="20"/>
-
-<circle class="dot" cx="600" cy="20" r="2"/>
+<line class="line" x1="0" y1="14" x2="560" y2="14"/>
+<circle class="dot" cx="600" cy="14" r="2.5"/>
+<line class="line" x1="640" y1="14" x2="1200" y2="14"/>
 
 </svg>
