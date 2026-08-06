@@ -1,13 +1,7 @@
 <div align="center">
 
 <img src="./assets/banner.svg" width="100%" alt="Banner">
-<br>
 
-# Tes
-
-<sub>still becoming.</sub>
-
-<br>
 
 <picture>
   <source

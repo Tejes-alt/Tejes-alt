@@ -1,86 +1,188 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500">
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1600 360"
+     width="1600"
+     height="360">
 
-  <defs>
+<defs>
 
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0B0B0C"/>
-      <stop offset="100%" stop-color="#141414"/>
-    </linearGradient>
+<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#090909"/>
+<stop offset="50%" stop-color="#101010"/>
+<stop offset="100%" stop-color="#171717"/>
+</linearGradient>
 
-    <radialGradient id="moon" cx="70%" cy="30%" r="35%">
-      <stop offset="0%" stop-color="#F5F2EA" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
-    </radialGradient>
+<filter id="noise">
+<feTurbulence
+type="fractalNoise"
+baseFrequency="0.75"
+numOctaves="2"
+seed="5"/>
 
-  </defs>
+<feColorMatrix
+values="
+1 0 0 0 0
+0 1 0 0 0
+0 0 1 0 0
+0 0 0 .018 0"/>
+</filter>
 
-  <!-- Background -->
-  <rect width="1600" height="500" fill="url(#bg)"/>
+<style>
 
-  <!-- Soft glow -->
-  <circle cx="1180" cy="180" r="170" fill="url(#moon)"/>
+.title{
+fill:#ECE7DE;
+font-size:72px;
+font-family:Georgia,'Times New Roman',serif;
+font-weight:bold;
+letter-spacing:12px;
+}
 
-  <!-- Film grain -->
-  <filter id="noise">
-    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2"/>
-    <feColorMatrix values="
-      1 0 0 0 0
-      0 1 0 0 0
-      0 0 1 0 0
-      0 0 0 .03 0"/>
-  </filter>
+.subtitle{
+fill:#8E8A86;
+font-size:19px;
+font-family:Georgia,serif;
+font-style:italic;
+letter-spacing:4px;
+}
 
-  <rect width="1600" height="500" filter="url(#noise)"/>
+.quote{
+fill:#6C6A67;
+font-size:16px;
+font-family:Georgia,serif;
+font-style:italic;
+letter-spacing:1px;
+}
 
-  <!-- Borders -->
+.rule{
+stroke:#2E2E2E;
+stroke-width:1;
+}
 
-  <line x1="90" y1="80" x2="1510" y2="80"
-        stroke="#4A4A4A"
-        stroke-width="1"/>
+.rule2{
+stroke:#232323;
+stroke-width:1;
+}
 
-  <line x1="90" y1="420" x2="1510" y2="420"
-        stroke="#4A4A4A"
-        stroke-width="1"/>
+.corner{
+fill:#555;
+font-size:12px;
+font-family:Georgia,serif;
+letter-spacing:5px;
+}
 
-  <!-- Title -->
+</style>
 
-  <text
-      x="120"
-      y="245"
-      fill="#ECE7DD"
-      font-size="92"
-      font-family="Cormorant Garamond, Georgia, serif"
-      letter-spacing="8">
+</defs>
 
-      TES
+<!-- background -->
 
-  </text>
+<rect
+width="1600"
+height="360"
+fill="url(#bg)"/>
 
-  <text
-      x="125"
-      y="305"
-      fill="#8A8A8A"
-      font-size="26"
-      font-family="Georgia, serif"
-      font-style="italic"
-      letter-spacing="5">
+<!-- grain -->
 
-      still becoming.
+<rect
+width="1600"
+height="360"
+filter="url(#noise)"
+opacity=".55"/>
 
-  </text>
+<!-- outer frame -->
 
-  <!-- Footer -->
+<line class="rule"
+x1="70"
+y1="45"
+x2="1530"
+y2="45"/>
 
-  <text
-      x="120"
-      y="390"
-      fill="#656565"
-      font-size="16"
-      font-family="Georgia, serif"
-      letter-spacing="4">
+<line class="rule"
+x1="70"
+y1="315"
+x2="1530"
+y2="315"/>
 
-      BUILD • READ • WRITE • LEARN
+<line class="rule2"
+x1="70"
+y1="45"
+x2="70"
+y2="315"/>
 
-  </text>
+<line class="rule2"
+x1="1530"
+y1="45"
+x2="1530"
+y2="315"/>
+
+<!-- side dividers -->
+
+<line class="rule"
+x1="130"
+y1="180"
+x2="560"
+y2="180"/>
+
+<line class="rule"
+x1="1040"
+y1="180"
+x2="1470"
+y2="180"/>
+
+<!-- title -->
+
+<text
+x="800"
+y="160"
+text-anchor="middle"
+class="title">
+
+TES
+
+</text>
+
+<!-- subtitle -->
+
+<text
+x="800"
+y="200"
+text-anchor="middle"
+class="subtitle">
+
+still becoming.
+
+</text>
+
+<!-- quote -->
+
+<text
+x="800"
+y="278"
+text-anchor="middle"
+class="quote">
+
+
+There are moments that make a lifetime.
+</text>
+
+<!-- corner -->
+
+<text
+x="120"
+y="292"
+class="corner">
+
+1848
+
+</text>
+
+<text
+x="1480"
+y="292"
+text-anchor="end"
+class="corner">
+
+ST. PETERSBURG
+
+</text>
 
 </svg>
